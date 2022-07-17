@@ -1,0 +1,41 @@
+.container {
+    display:flex;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.todos{
+    width: 50%;
+    display:flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding:20px;
+    font-size: 20px;
+}
+
+.button{
+    width:25%;
+    display:inline-block;
+    margin: 0 auto;
+    padding:10px;
+    margin: 15px;
+}
+
+.button-delete-text{
+    width:15%;
+    display:inline-block;
+    margin: 0 auto;
+    padding:10px;
+    font-size: 15px;
+}
+
+.post-buttons{
+    display:flex;
+    align-items:center;
+}
+
+
+.row-completed {
+    background-color: lightgreen;
+}

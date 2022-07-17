@@ -1,0 +1,28 @@
+<div class="container">
+    <div>
+        <h1>The Amazing ToDo-List!</h1>
+    </div>
+</div>
+<div class="container">
+    <input style="width:80%" (keydown)="enterAddElement($event)" type="text" placeholder="What to do?" [(ngModel)]="message">
+    <button class="button-delete-text" (click)="deleteText()">Delete Text</button>
+</div>
+
+<div class="container">
+    <button class="button" (click)="addToList()">Add to list</button>
+    <button class="button" (click)="cleanCompleted()">Clean Completed</button>
+    <button class="button" (click)="showPosposed()">Show Posposed</button>
+    <button class="button" (click)="deleteAll()">Delete List</button>
+</div>
+
+<div class="todos" *ngFor="let item of todoList; let i = index" 
+    [ngClass]="{'row-completed':item.completed===true}">
+    <div>
+        <p>{{ item.name }}</p>
+    </div>
+    <div class="post-buttons">
+        <button *ngIf="item.completed === false" (click)="completedTask(i)">Completed</button>
+        <button *ngIf="item.completed === false" (click)="posposedTask(i)">Pospone</button>
+        <button  (click)="deleteElement(i)">Delete</button>
+    </div>
+</div>
